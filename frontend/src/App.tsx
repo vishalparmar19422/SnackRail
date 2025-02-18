@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Train, Search, Clock, MapPin } from "lucide-react";
+import { Train, Search, Clock,  } from "lucide-react";
 
 interface Schedule {
   stationCode: string;
@@ -84,7 +84,6 @@ function App() {
   }, [currentKeyIndex]); // Triggered when currentKeyIndex changes
 
   const getDayStatus = (runningDays: string, index: number) => {
-    const days = ["S", "M", "T", "W", "T", "F", "S"];
     const dayStatus = runningDays.split("").map((status) => status === "Y");
     return dayStatus[index];
   };
